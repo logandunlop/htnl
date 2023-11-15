@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/MyServletDB")
+@WebServlet("/MyServletDBHTNL")
 public class MyServletDBHTNL extends HttpServlet {
    private static final long serialVersionUID = 1L;
-   static String url = "jdbc:mysql://ec2-54-180-113-223.ap-northeast-2.compute.amazonaws.com:3306/myDB";
-   static String user = "newmysqlremoteuser";
-   static String password = "mypassword";
+   static String url = "jdbc:mysql://ec2-18-224-44-26.us-east-2.compute.amazonaws.com:3306/htnlDB";
+   static String user = "noajurgens";
+   static String password = "csci4830";
    static Connection connection = null;
 
    public MyServletDBHTNL() {
@@ -48,7 +48,7 @@ public class MyServletDBHTNL extends HttpServlet {
          System.out.println("Failed to make connection!");
       }
       try {
-         String selectSQL = "SELECT * FROM myTableHTNL";// WHERE MYUSER LIKE ?";
+         String selectSQL = "SELECT * FROM htnlTable";// WHERE MYUSER LIKE ?";
 //         String theUserName = "user%";
          response.getWriter().println(selectSQL + "<br>");
          response.getWriter().println("------------------------------------------<br>");

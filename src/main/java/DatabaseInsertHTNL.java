@@ -28,7 +28,7 @@ public class DatabaseInsertHTNL extends HttpServlet {
       String hobbies = request.getParameter("hobbies");
 
       Connection connection = null;
-      String insertSql = " INSERT INTO htnlTable (id, FIRST_NAME, LAST_NAME, gender, EMAIL, PHONE, MAJOR, GRADUATING_YEAR, HOBBIES) values (default, ?, ?, ?, ?, ?, ?, ?, ?)";
+      String insertSql = " INSERT INTO htnlTable (id, FIRST_NAME, LAST_NAME, GENDER, EMAIL, PHONE, MAJOR, GRADUATING_YEAR, HOBBIES) values (default, ?, ?, ?, ?, ?, ?, ?, ?)";
 
       try {
          DBConnectionHTNL.getDBConnection();
@@ -70,7 +70,7 @@ public class DatabaseInsertHTNL extends HttpServlet {
 
             "</ul>\n");
 
-      out.println("<a href=/webproject-techexercise-ldunlop/DatabaseSearchHTNL.html>Search Database</a> <br>");
+      out.println("<a href=/htnl/DatabaseSearchHTNL.html>Search Database</a> <br>");
       out.println("</body></html>");
    }
 

@@ -43,10 +43,10 @@ public class DatabaseSearchHTNL extends HttpServlet {
          connection = DBConnectionHTNL.connection;
 
          if (keyword.isEmpty()) {
-            String selectSQL = "SELECT * FROM MyTableHTNLTechExercise";
+            String selectSQL = "SELECT * FROM htnlTable";
             preparedStatement = connection.prepareStatement(selectSQL);
          } else {
-            String selectSQL = "SELECT * FROM MyTableHTNLTechExercise WHERE FIRST_NAME LIKE ?";
+            String selectSQL = "SELECT * FROM htnlTable WHERE FIRST_NAME LIKE ?";
             String theUserName = keyword + "%";
             preparedStatement = connection.prepareStatement(selectSQL);
             preparedStatement.setString(1, theUserName);
@@ -57,24 +57,26 @@ public class DatabaseSearchHTNL extends HttpServlet {
             int id = rs.getInt("id");
             String firstName = rs.getString("FIRST_NAME").trim();
             String lastName = rs.getString("LAST_NAME").trim();
+            String gender = rs.getString("GENDER").trim();
             String email = rs.getString("EMAIL").trim();
             String phone = rs.getString("PHONE").trim();
-            String admission = rs.getString("ADMISSION_YEAR").trim();
-            String graduation = rs.getString("GRADUATION_YEAR").trim();
-            String GPA = rs.getString("GPA").trim();
+            String major = rs.getString("MAJOR").trim();
+            String graduation = rs.getString("GRADUATING_YEAR").trim();
+            String hobbies = rs.getString("hobbies").trim();
 
             if (keyword.isEmpty() || firstName.contains(keyword)) {
                out.println("ID: " + id + ", ");
                out.println("First Name: " + firstName + ", ");
                out.println("Last Name: " + lastName + ", ");
+               out.println("Gender: " + gender + ", ");
                out.println("Email: " + email + ", ");
                out.println("Phone: " + phone + ", ");
-               out.println("Admission Year: " + admission + ", ");
+               out.println("Major: " + major + ", ");
                out.println("Graduation Year: " + graduation + ", ");
-               out.println("Grade Point Average: " + GPA + "<br>");
+               out.println("Hobbies: " + hobbies + "<br>");
             }
          }
-         out.println("<a href=/webproject-techexercise-lHTNL/DatabaseSearchHTNL.html>Search Database</a> <br>");
+         out.println("<a href=/htnl/DatabaseSearchHTNL.html>Search Database</a> <br>");
          out.println("</body></html>");
          rs.close();
          preparedStatement.close();

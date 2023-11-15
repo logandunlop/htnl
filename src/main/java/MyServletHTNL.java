@@ -19,7 +19,6 @@ public class MyServletHTNL extends HttpServlet {
      */
     public MyServletHTNL() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
