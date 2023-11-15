@@ -62,7 +62,7 @@ public class DatabaseSearchHTNL extends HttpServlet {
             String phone = rs.getString("PHONE").trim();
             String major = rs.getString("MAJOR").trim();
             String graduation = rs.getString("GRADUATING_YEAR").trim();
-            String hobbies = rs.getString("hobbies").trim();
+            String hobbies = rs.getString("HOBBIES").trim();
 
             if (keyword.isEmpty() || firstName.contains(keyword)) {
                out.println("ID: " + id + ", ");
