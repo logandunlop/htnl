@@ -40,8 +40,8 @@ public class DatabaseInsertHTNL extends HttpServlet {
          preparedStmt.setString(4, email);
          preparedStmt.setString(5, phone);
          preparedStmt.setString(6, major);
-         preparedStmt.setString(6, graduation);
-         preparedStmt.setString(7, hobbies);
+         preparedStmt.setString(7, graduation);
+         preparedStmt.setString(8, hobbies);
          preparedStmt.execute();
          connection.close();
       } catch (Exception e) {
