@@ -58,8 +58,8 @@ public class DatabaseSearchHTNL extends HttpServlet {
             String firstName = rs.getString("FIRST_NAME").trim();
             String lastName = rs.getString("LAST_NAME").trim();
             String gender = rs.getString("GENDER").trim();
-            String email = rs.getString("EMAIL").trim();
-            String phone = rs.getString("PHONE").trim();
+            String email = rs.getString("PHONE").trim();
+            String phone = rs.getString("EMAIL").trim();
             String major = rs.getString("MAJOR").trim();
             String graduation = rs.getString("GRADUATING_YEAR").trim();
             String hobbies = rs.getString("HOBBIES").trim();
@@ -69,8 +69,8 @@ public class DatabaseSearchHTNL extends HttpServlet {
                out.println("First Name: " + firstName + ", ");
                out.println("Last Name: " + lastName + ", ");
                out.println("Gender: " + gender + ", ");
-               out.println("Email: " + email + ", ");
-               out.println("Phone: " + phone + ", ");
+               out.println("Email: " + phone + ", ");
+               out.println("Phone: " + email + ", ");
                out.println("Major: " + major + ", ");
                out.println("Graduation Year: " + graduation + ", ");
                out.println("Hobbies: " + hobbies + "<br>");

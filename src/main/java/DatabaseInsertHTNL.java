@@ -21,14 +21,14 @@ public class DatabaseInsertHTNL extends HttpServlet {
       String firstName = request.getParameter("firstName");
       String lastName = request.getParameter("lastName");
       String gender = request.getParameter("gender");
-      String email = request.getParameter("email");
-      String phone = request.getParameter("phone");
+      String email = request.getParameter("phone");
+      String phone = request.getParameter("email");
       String major = request.getParameter("major");
       String graduation = request.getParameter("graduation");
       String hobbies = request.getParameter("hobbies");
 
       Connection connection = null;
-      String insertSql = " INSERT INTO htnlTable (id, FIRST_NAME, LAST_NAME, GENDER, EMAIL, PHONE, MAJOR, GRADUATING_YEAR, HOBBIES) values (default, ?, ?, ?, ?, ?, ?, ?, ?)";
+      String insertSql = " INSERT INTO htnlTable (id, FIRST_NAME, LAST_NAME, GENDER, PHONE, EMAIL, MAJOR, GRADUATING_YEAR, HOBBIES) values (default, ?, ?, ?, ?, ?, ?, ?, ?)";
 
       try {
          DBConnectionHTNL.getDBConnection();
@@ -37,11 +37,11 @@ public class DatabaseInsertHTNL extends HttpServlet {
          preparedStmt.setString(1, firstName);
          preparedStmt.setString(2, lastName);
          preparedStmt.setString(3, gender);
-         preparedStmt.setString(4, email);
-         preparedStmt.setString(5, phone);
+         preparedStmt.setString(4, phone);
+         preparedStmt.setString(5, email);
          preparedStmt.setString(6, major);
-         preparedStmt.setString(6, graduation);
-         preparedStmt.setString(7, hobbies);
+         preparedStmt.setString(7, graduation);
+         preparedStmt.setString(8, hobbies);
          preparedStmt.execute();
          connection.close();
       } catch (Exception e) {
@@ -62,8 +62,8 @@ public class DatabaseInsertHTNL extends HttpServlet {
             "  <li><b>First Name</b>: " + firstName + "\n" + //
             "  <li><b>Last Name</b>: " + lastName + "\n" + //
             "  <li><b>Gender</b>: " + gender + "\n" + //
-            "  <li><b>Email</b>: " + email + "\n" + //
-            "  <li><b>Phone</b>: " + phone + "\n" + //
+            "  <li><b>Email</b>: " + phone + "\n" + //
+            "  <li><b>Phone</b>: " + email + "\n" + //
             "  <li><b>Major</b>: " + major + "\n" + //
             "  <li><b>Graduation Year</b>: " + graduation + "\n" + //
             "  <li><b>Hobbies</b>: " + hobbies + "\n" + //
