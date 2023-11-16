@@ -21,8 +21,8 @@ public class DatabaseInsertHTNL extends HttpServlet {
       String firstName = request.getParameter("firstName");
       String lastName = request.getParameter("lastName");
       String gender = request.getParameter("gender");
-      String email = request.getParameter("phone");
-      String phone = request.getParameter("email");
+      String phone = request.getParameter("phone");
+      String email = request.getParameter("email");
       String major = request.getParameter("major");
       String graduation = request.getParameter("graduation");
       String hobbies = request.getParameter("hobbies");
