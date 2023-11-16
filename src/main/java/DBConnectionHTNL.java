@@ -40,13 +40,13 @@ public class DBConnectionHTNL {
 
    static String getUserName() {
       String usr = UtilPropHTNL.getProp("user");
-      System.out.println("[DBG] URL: " + usr);
+      System.out.println("[DBG] USR: " + usr);
       return usr;
    }
 
    static String getPassword() {
       String pwd = UtilPropHTNL.getProp("password");
-      System.out.println("[DBG] URL: " + pwd);
+      System.out.println("[DBG] PWD: " + pwd);
       return pwd;
    }
 }
