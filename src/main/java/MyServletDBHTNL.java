@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/MyServletDBHTNL")
 public class MyServletDBHTNL extends HttpServlet {
    private static final long serialVersionUID = 1L;
-   static String url = "jdbc:mysql://ec2-18-224-44-26.us-east-2.compute.amazonaws.com:3306/htnlDB";
+   static String url = "jdbc:mysql://ec2-3-145-99-219.us-east-2.compute.amazonaws.com:3306/htnlDB";
    static String user = "noajurgens";
    static String password = "csci4830";
    static Connection connection = null;
